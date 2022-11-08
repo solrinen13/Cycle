@@ -10,11 +10,12 @@ public class Main {
         {
             int deposit = 15000;
             int totalDeposit = 0;
-            int i = 1;
-            while (totalDeposit < 2_459_000  ) {
+            int month = 1;
+            int fullDeposit = 2_459_000;
+            while (totalDeposit < fullDeposit  ) {
                 totalDeposit = totalDeposit + deposit;
-                i= i + 1;
-                System.out.println("Месяц " + i + " сумма накоплений равна " + totalDeposit+" рублей");
+                month= month + 1;
+                System.out.println("Месяц " + month + " сумма накоплений равна " + totalDeposit+" рублей");
             }
 
         }
@@ -41,9 +42,10 @@ public class Main {
             int humanPopulation = 12_000_000;
             int humanPopulationUp = humanPopulation/1000*17;
             int humanPopulationLoss = humanPopulation/1000*8;
-            for (int i = 1; i < 11; i++) {
+            int limitYear = 10;
+            for (int year = 1; year <= limitYear; year++) {
                 humanPopulation = humanPopulation + humanPopulationUp - humanPopulationLoss;
-                System.out.println("год " + i + " численность населения " + humanPopulation);
+                System.out.println("год " + year + " численность населения " + humanPopulation);
             }
 
 
@@ -52,9 +54,11 @@ public class Main {
         System.out.println("Task №2.1 ");
         {
             int deposit = 15_000;
-            for (int i = 1; deposit < 12_000_000; i++) {
-                deposit = deposit + deposit/100 * 7;
-                System.out.println("месяц " + i + " сумма накоплений " + deposit);
+            int limitDeposit = 12_000_000;
+            int percentForMonth = 7;
+            for (int month = 1; deposit < limitDeposit; month++) {
+                deposit = deposit + deposit/100 * percentForMonth;
+                System.out.println("месяц " + month + " сумма накоплений " + deposit);
             }
 
         }
@@ -62,10 +66,12 @@ public class Main {
         System.out.println("Task №2.2 ");
         {
             int deposit = 15_000;
-            for (int i = 1; deposit < 12_000_000; i++) {
-                deposit = deposit + deposit/100 * 7;
-                if (i % 6 == 0) {
-                    System.out.println("месяц " + i + " сумма накоплений " + deposit);
+            int percentForMonth = 7;
+            int limitDeposit = 12_000_000;
+            for (int month = 1; deposit < limitDeposit; month++) {
+                deposit = deposit + deposit/100 * percentForMonth;
+                if (month % 6 == 0) {
+                    System.out.println("месяц " + month + " сумма накоплений " + deposit);
                 }
             }
 
@@ -74,8 +80,10 @@ public class Main {
         System.out.println("Task №2.3 ");
         {
             int deposit = 15_000;
-            for (int i = 1; i < 109; i++) {
-                deposit = deposit + deposit/100 * 7;
+            int percentForMonth = 7;
+            int monthAll = 12 * 9;
+            for (int i = 1; i < monthAll; i++) {
+                deposit = deposit + deposit/100 * percentForMonth;
                 if (i % 6 == 0) {
                     System.out.println("месяц " + i + " сумма накоплений " + deposit);
                 }
